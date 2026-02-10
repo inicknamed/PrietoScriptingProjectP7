@@ -9,7 +9,7 @@ public class LinearIntterpolation : MonoBehaviour
     Vector3 to = new Vector3(5f, 6f, 7f);
 
     // Here result is (4f, 5f, 6f)
-    Vector3 result = Vector3.Lerp(from, to, 0.75f);
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,6 @@ public class LinearIntterpolation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f * Time.deltaTime);
+        GetComponent<Light>().intensity = Mathf.Lerp(GetComponent<Light>().intensity, 8f, 0.5f * Time.deltaTime);
     }
 }
